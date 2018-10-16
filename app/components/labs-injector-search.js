@@ -1,0 +1,1 @@
+export { default } from 'labs-layers-injector/components/labs-injector-search';

@@ -1,9 +1,14 @@
 <h2 id="title">Welcome to Ember</h2>
-{{log model}}
+
 {{#labs-map id='main-map' initOptions=(hash
     style=model.meta.mapboxStyle
   ) as |map|}}
   {{map.labs-layers layerGroups=model.layerGroups}}
+
+  {{labs-injector-search 
+    classNames='labs-injector-search'
+    map=map.mapInstance 
+    store=store}}
 {{/labs-map}}
 
 {{outlet}}
